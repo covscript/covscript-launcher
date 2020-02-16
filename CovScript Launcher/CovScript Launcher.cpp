@@ -17,7 +17,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     std::string current_path = buffer;
     std::string bin_path = "\"" + current_path + "\\bin\\cs.exe\"";
     std::string import_path = "\"" + current_path + "\\imports\"";
-    std::string command = bin_path + " -i " + import_path + " \"" + current_path + "\\main.csc\"";
+    std::string command = bin_path + " -i " + import_path + " -l \"" + current_path + "\\launcher.log\" \"" + current_path + "\\main.csc\"";
     STARTUPINFOA si;
     PROCESS_INFORMATION pi;
     ZeroMemory(&si, sizeof(si));
